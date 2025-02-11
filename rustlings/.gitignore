@@ -1,3 +1,59 @@
-Cargo.lock
+# Ignore Rust build output
 target/
+debug/
+release/
+
+# Ignore dependency graph and lock files
+cargo.lock
+cargo-deps.json
+
+# Ignore Rust debug/release binaries and intermediate compilation files
+*.rmeta
+*.rlib
+*.d
+*.o
+*.so
+*.dylib
+*.dll
+*.exe
+
+# Ignore Cargo fingerprinting and incremental compilation files
+**/fingerprint/
+**/target/debug/incremental/
+**/target/release/incremental/
+
+# Ignore Cargo debug artifacts (seen in your screenshots)
+**/target/debug/deps/
+**/target/debug/incremental/
+**/target/debug/.fingerprint/
+**/target/debug/build/
+**/target/debug/examples/
+**/target/debug/lib*
+
+# Ignore profiling and debugging output
+*.profraw
+*.gcda
+*.gcno
+cachegrind.out.*
+callgrind.out.*
+
+# Ignore Rust Analyzer metadata
+rust-project.json
+
+# Ignore VS Code and JetBrains workspace settings
 .vscode/
+*.code-workspace
+.idea/
+*.iml
+
+# Ignore Rustfmt and Clippy configs (if only local)
+rustfmt.toml
+clippy.toml
+
+# Ignore Cargo.lock only if this is a library (keep it for binaries)
+Cargo.lock
+
+# Ignore Rustlings metadata (if tracking solutions only)
+exercises/*/compile_fail.rs
+exercises/*/run_pass.rs
+exercises/*/run_fail.rs
